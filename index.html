@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANKUSH</title>
+    
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-box">
+        <div class="login">
+                <h2>LOGIN</h2>
+                <form name="loginForm" class="signUp">
+                    <input type="text" required placeholder="Enter Username" />
+                    <input type="password" required placeholder="Enter Password" />
+                    <div class="login-buttons">
+                    <input type="submit" value="Sign In" />
+                    <input type="button" onclick="toSignup()" value="Sign Up" />
+                    </div>
+                </form>
+        </div>
+        <div class="signup hide">
+          <div class="progressBar">
+            <div onclick="showForm(personal)" class="bar personalTab">
+              <span>Personal</span>
+              <i class="fas fa-check-square hide"></i>
+            </div>
+            <div
+              onclick="showForm(professional)"
+              class="bar professionalTab"
+            >
+              <span>Professional</span>
+              <i class="fas fa-check-square hide"></i>
+              
+            </div>
+            <div onclick="showForm(education)" class="bar educationTab">
+              <span>Education</span>
+              <i class="fas fa-check-square hide"></i>
+              
+            </div>
+        </div>
+          <div class="head"><h3>Tell me Something About Yourself!!</h3></div>
+          <form name="signupForm" class="signUp">
+            <div class="personal">
+              <div class="form1">
+                <input type="text" name="fname" placeholder="First Name *" />
+              
+                <input type="text" name="lname" placeholder="Last Name *" />
+              </div>
+              <input type="email" name="email" placeholder="Email *" />
+              <input type="tel" name="phone" placeholder="Phone Number *" />
+              <div class="usernameField">
+                <input
+                  type="text"
+                  name="username"
+                  value=""
+                  placeholder="Username *"
+                />
+                <div onclick="generateUniqueUsername()">
+                  
+                </div>
+              </div>
+              <div >
+                <input type="password" name="password" placeholder="Password *" />
+              </div>
+              <div>
+                <input type="password" name="confirm_password" placeholder="Confirm Password *" />
+              </div>
+                <div class="signup-buttons">
+                    <input
+                        onclick="toLogin()"
+                        type="button"
+                        value="Back To Login"
+                    />
+                
+                    <input
+                        onclick="showForm(professional)"
+                        type="button"
+                        value="Next"
+                    />
+                </div>
+            </div>
+            <div class="professional hide">
+              <div class="form1">
+                <input
+                  type="text"
+                  required
+                  name="currentjob"
+                  placeholder="Job Title *"
+                />
+                <input
+                  type="text"
+                  required
+                  name="jobtype"
+                  placeholder="JobType *"
+                />
+              </div>
+              <input
+                type="text"
+                name="company"
+                required
+                placeholder="Company Name *"
+              />
+              
+              
+              <div class="form1">
+                <input type="date" name="FROM" placeholder="Start Year" />
+                <input type="date" name="TO" placeholder="End Year (or expected)" />
+              </div>
+              <div class="signup-buttons">
+                <input
+                  onclick="showForm(personal)"
+                  type="button"
+                  value="Previous"
+                />
+                <input
+                  onclick="showForm(education)"
+                  type="button"
+                  value="Next"
+                />
+              </div>
+            </div>
+
+            <div class="education hide">
+              <input
+                type="text"
+                name="college"
+                required
+                placeholder="College *"
+              />
+              <input
+                type="text"
+                name="degree"
+                required
+                placeholder="Degree *"
+              />
+              <input type="text" name="branch" required placeholder="Branch *" />
+              <div class="form1">
+                <input type="date" placeholder="Start Year" />
+                <input type="date" placeholder="End Year " />
+              </div>
+              <input type="text" name="percentage" required placeholder="Aggregate Percentage *" />
+              <div class="signup-buttons">
+                <input
+                  onclick="showForm(professional)"
+                  type="button"
+                  value="Previous"
+                />
+                <input type="button" onclick="submitButton()" value="Submit" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
